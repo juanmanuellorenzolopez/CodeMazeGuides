@@ -13,7 +13,7 @@ namespace ShellSort
 
         [Benchmark]
         [ArgumentsSource(nameof(SampleArrays))]
-        public int[] ShellSort(int[] array, int size)
+        public int[] ShellSort(int[] array, int size, string arrayName)
         {
             for (int interval = size / 2; interval > 0; interval /= 2)
             {

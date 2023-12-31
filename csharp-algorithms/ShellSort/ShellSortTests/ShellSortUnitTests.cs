@@ -11,7 +11,7 @@ namespace ShellSortTests
             var expected = new int[] { 1, 20, 49, 57, 73, 99, 133 };
             var sortFunction = new ShellSortMethods();
 
-            var sortedArray = sortFunction.ShellSort(array, array.Length);
+            var sortedArray = sortFunction.ShellSort(array, array.Length, string.Empty);
 
             Assert.IsNotNull(sortedArray);
             CollectionAssert.AreEqual(sortedArray, expected);
@@ -23,7 +23,7 @@ namespace ShellSortTests
             var sortFunction = new ShellSortMethods();
             var array = ShellSortMethods.CreateRandomArray(200, 0, 200);
 
-            var sortedArray = sortFunction.ShellSort(array, array.Length);
+            var sortedArray = sortFunction.ShellSort(array, array.Length, string.Empty);
 
             Assert.IsInstanceOfType(sortedArray, typeof(int[]));
         }
@@ -34,7 +34,7 @@ namespace ShellSortTests
             var sortFunction = new ShellSortMethods(); ;
             var array = ShellSortMethods.CreateRandomArray(200, 0, 200);
 
-            var sortedArray = sortFunction.ShellSort(array, array.Length);
+            var sortedArray = sortFunction.ShellSort(array, array.Length, string.Empty);
 
             Assert.IsNotNull(sortedArray);
         }
@@ -46,7 +46,7 @@ namespace ShellSortTests
             var expected = new int[] { 73 };
             var sortFunction = new ShellSortMethods();
 
-            var sortedArray = sortFunction.ShellSort(array, array.Length);
+            var sortedArray = sortFunction.ShellSort(array, array.Length, string.Empty);
 
             Assert.IsNotNull(sortedArray);
             CollectionAssert.AreEqual(sortedArray, expected);
