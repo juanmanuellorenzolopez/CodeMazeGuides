@@ -4,16 +4,16 @@ namespace ShellSort
 {
     public class ShellSortMethods
     {
-        public IEnumerable<object[]> SampleArrays()
+        public static IEnumerable<object[]> SampleArrays()
         {
             yield return new object[] { CreateSortedArray(2000000), 2000000, "Best Case" };
             yield return new object[] { CreateRandomArray(2000000, 1, 2000000), 2000000, "Average Case" };
-            yield return new object[] { CreateImbalancedArray(2000000, 1, 2000000), 2000000, "Worst Case" };
+            yield return new object[] { CreateImBalancedArray(2000000, 1, 2000000), 2000000, "Worst Case" };
         }
 
         [Benchmark]
         [ArgumentsSource(nameof(SampleArrays))]
-        public int[] ShellSort(int[] array, int size, string arrayName)
+        public int[] ShellSort(int[] array, int size)
         {
             for (int interval = size / 2; interval > 0; interval /= 2)
             {
@@ -56,7 +56,7 @@ namespace ShellSort
             return array;
         }
 
-        public static int[] CreateImbalancedArray(int size, int lower, int upper)
+        public static int[] CreateImBalancedArray(int size, int lower, int upper)
         {
             var array = new int[size];
             var rand = new Random();
