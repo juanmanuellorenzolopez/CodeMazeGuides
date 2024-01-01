@@ -7,7 +7,7 @@ namespace ShellSortTests
         [TestMethod]
         public void GivenUnsortedArray_WhenArrayIsNotEmpty_ThenReturnSortedArray()
         {
-            var array = new int[] { 73, 57, 49, 99, 133, 20, 1 };
+            var array = new int[] { 73, 57, 49, 99, 133, 20, 2 };
             var expected = new int[] { 1, 20, 49, 57, 73, 99, 133 };
             var sortFunction = new ShellSortMethods();
 
